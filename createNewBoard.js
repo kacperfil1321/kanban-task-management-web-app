@@ -7,6 +7,7 @@ document.getElementsByClassName('topSide')[0].getElementsByClassName('add')[0].a
 document.getElementById('blur').addEventListener('click', function (){
     document.getElementById('blur').style.display = 'none';
     document.getElementById('boardWindow').style.display = 'none';
+    document.getElementById('deleteBoard').style.display = 'none';
 });
 
 var columns = document.getElementById('columns');

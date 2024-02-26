@@ -17,7 +17,7 @@
     transition-duration: 0.3s;
 }
 
-#boardWindow{
+#boardWindow, #deleteBoard{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -33,14 +33,22 @@
     transition-duration: 0.3s;
 }
 
-#boardWindow .title{
+#boardWindow .title, #deleteBoard .title{
     font-size: 23px;
     margin-bottom: 25px;
 }
 
-#boardWindow .subtitle{
+#deleteBoard .title{
+    color: #EA5555;
+}
+
+#boardWindow .subtitle, #deleteBoard .subtitle{
     font-size: 15px;
     margin-bottom: 10px;
+}
+
+#deleteBoard .subtitle{
+    font-weight: normal;
 }
 
 #boardWindow .column{

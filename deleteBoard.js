@@ -1,4 +1,14 @@
 document.getElementById('delete').addEventListener('click', function (){
+    document.getElementById('blur').style.display = 'block';
+    document.getElementById('deleteBoard').style.display = 'flex';
+
+    if(document.getElementById('option').style.display == 'block'){
+        document.getElementById('option').style.display = 'none';
+    }
+    else document.getElementById('option').style.display = 'block';
+});
+
+document.getElementById('deleteBoardDelete').addEventListener('click', function (){
     localStorage.removeItem('board' + localStorage.getItem('activeBoard'));
     localStorage.setItem('numberOfBoards', parseInt(localStorage.getItem('numberOfBoards')) - 1);
 
@@ -23,9 +33,4 @@ document.getElementById('delete').addEventListener('click', function (){
         localStorage.setItem('activeBoard', 0);
         selectBoard(0);
     }
-
-    if(document.getElementById('option').style.display == 'block'){
-        document.getElementById('option').style.display = 'none';
-    }
-    else document.getElementById('option').style.display = 'block';
 });
