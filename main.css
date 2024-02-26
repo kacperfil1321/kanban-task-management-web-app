@@ -1,0 +1,102 @@
+#blur{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.6;
+}
+
+#main{
+    float: left;
+    width: calc(100% - 230px);
+    height: calc(100vh - 70px);
+    background-color: var(--main);
+    transition-duration: 0.3s;
+}
+
+#boardWindow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--barMain);
+    color: var(--titleColor);
+    padding: 40px;
+    border-radius: 10px;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    transition-duration: 0.3s;
+}
+
+#boardWindow .title{
+    font-size: 23px;
+    margin-bottom: 25px;
+}
+
+#boardWindow .subtitle{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#boardWindow .column{
+    width: 350px;
+    margin-bottom: 10px;
+}
+
+#boardWindow input{
+    width: 100%;
+    padding: 9px 10px;
+    font-size: 15px;
+    background-color: var(--barMain);
+    color: var(--titleColor);
+    border: solid var(--border) 1px;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    font-weight: normal;
+    transition-duration: 0.3s;
+}
+
+#boardWindow #columns .column{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#boardWindow #columns .column input{
+    width: calc(100% - 30px);
+}
+
+#boardWindow #columns .column svg:hover > g{
+    fill: #EA5555;
+}
+
+#boardWindow #columns .column svg{
+    cursor: pointer;
+}
+
+#boardWindow #addNewColumn, #boardWindow #createNewBoard{
+    width: 350px;
+    padding: 10px 0;
+    border-radius: 20px;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+}
+
+#boardWindow #addNewColumn{
+    background-color: var(--boardHoverBg);
+    color: #635FC7;
+    margin-bottom: 10px;
+    transition-duration: 0.3s;
+}
+
+#boardWindow #createNewBoard{
+    background-color: #635FC7;
+    color: #FFF;
+}

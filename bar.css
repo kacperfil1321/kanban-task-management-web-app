@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: bold;
+}
+
+#topBar{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background-color: var(--barMain);
+    border-bottom: solid var(--border) 2px;
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+}
+
+#topBar #logo{
+    height: 100%;
+    width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: solid var(--border) 2px;
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+}
+
+#topBar #titleBar{
+    width: calc(100% - 230px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#topBar #titleBar .title{
+    color: var(--titleColor);
+    font-size: 18px;
+    margin-left: 20px;
+    transition-duration: 0.3s;
+}
+
+#topBar #options{
+    display: flex;
+    align-items: center;
+}
+
+#topBar #options #addNewTask{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #635FC7;
+    color: #FFF;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#topBar #options span{
+    padding: 5px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+#topBar #options #option{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 150px;
+    padding: 10px;
+    background-color: var(--barMain);
+    border-radius: 10px;
+}
+
+#topBar #options #option #edit{
+    color: #828FA3;
+    font-weight: normal;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+#topBar #options #option #delete{
+    color: #EA5555;
+    font-weight: normal;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+#sideBar{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 230px;
+    height: calc(100vh - 70px);
+    padding-right: 20px;
+    border-right: solid var(--border) 2px;
+    box-sizing: border-box;
+    color: #828FA3;
+    background-color: var(--barMain);
+    transition-duration: 0.3s;
+}
+
+#sideBar svg{
+    margin-right: 10px;
+}
+
+#sideBar .topSide .board, #sideBar .topSide .title{
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px 20px;
+    font-size: 12px;
+    border-radius: 0 20px 20px 0;
+    transition-duration: 0.25s;
+}
+
+#sideBar .topSide .title{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#sideBar .topSide .board:hover{
+    background-color: var(--boardHoverBg);
+    color: #635FC7;
+    cursor: pointer;
+    transition-duration: 0.25s;
+}
+
+#sideBar .topSide .board path{
+    transition-duration: 0.25s;
+}
+
+#sideBar .topSide .board:hover path{
+    fill: #635FC7;
+    transition-duration: 0.25s;
+}
+
+#sideBar .topSide .active{
+    background-color: #635FC7 !important;
+    color: #FFF !important;
+}
+
+#sideBar .topSide .active path{
+    fill: #FFF !important;
+}
+
+#sideBar .topSide .add{
+    color: #635FC7;
+}
+
+#sideBar .topSide .add path{
+    fill: #635FC7;
+}
+
+#sideBar .bottomSide #modeToogle{
+    background-color: var(--main);
+    margin-left: 20px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.3s;
+}
+
+#sideBar .bottomSide #modeToogle img{
+    margin: 0 15px;
+}
+
+#sideBar .bottomSide #modeToogle #toogle{
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border-radius: 30px;
+    background-color: #635FC7;
+    transition-duration: 0.25s;
+}
+
+#sideBar .bottomSide #modeToogle #toogle:hover{
+    background-color: #A8A4FF;
+    cursor: pointer;
+    transition-duration: 0.25s;
+}
+
+#sideBar .bottomSide #modeToogle #toogle .point{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #FFF;
+    transition-duration: 0.3s;
+}
+
+#sideBar .bottomSide #sideBarToogle{
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px 20px;
+    font-size: 12px;
+    border-radius: 0 20px 20px 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    transition-duration: 0.25s;
+}
+
+#sideBar .bottomSide #sideBarToogle:hover{
+    background-color: var(--boardHoverBg);
+    color: #635FC7;
+    cursor: pointer;
+    transition-duration: 0.25s;
+}
+
+#sideBar .bottomSide #sideBarToogle svg{
+    margin-right: 10px;
+}
+
+#sideBar .bottomSide #sideBarToogle path{
+    transition-duration: 0.25s;
+}
+
+#sideBar .bottomSide #sideBarToogle:hover path{
+    fill: #635FC7;
+    transition-duration: 0.25s;
+}
