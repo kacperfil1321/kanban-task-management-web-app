@@ -1,6 +1,11 @@
 document.getElementById('delete').addEventListener('click', function (){
+    if(this.innerText == 'Delete Board'){
+        document.getElementById('deleteWindow').getElementsByClassName('title')[0].innerText = 'Delete this board?';
+        document.getElementById('deleteWindow').getElementsByClassName('subtitle')[0].innerText = 'Are you sure you want to delete the \'' + localStorage.getItem('board' + localStorage.getItem('activeBoard')) + '\' board? This action will remove all columns and tasks and cannot be reversed.';
+    }
+    // else for task
     document.getElementById('blur').style.display = 'block';
-    document.getElementById('deleteBoard').style.display = 'flex';
+    document.getElementById('deleteWindow').style.display = 'flex';
 
     if(document.getElementById('option').style.display == 'block'){
         document.getElementById('option').style.display = 'none';
@@ -8,7 +13,7 @@ document.getElementById('delete').addEventListener('click', function (){
     else document.getElementById('option').style.display = 'block';
 });
 
-document.getElementById('deleteBoardDelete').addEventListener('click', function (){
+document.getElementById('deleteWindowDelete').addEventListener('click', function (){
     localStorage.removeItem('board' + localStorage.getItem('activeBoard'));
     localStorage.setItem('numberOfBoards', parseInt(localStorage.getItem('numberOfBoards')) - 1);
 
@@ -33,4 +38,12 @@ document.getElementById('deleteBoardDelete').addEventListener('click', function 
         localStorage.setItem('activeBoard', 0);
         selectBoard(0);
     }
+
+    document.getElementById('blur').style.display = 'none';
+    document.getElementById('deleteWindow').style.display = 'none';
 });
+
+document.getElementById('deleteWindowCancel').addEventListener('click', function (){
+    document.getElementById('blur').style.display = 'none';
+    document.getElementById('deleteWindow').style.display = 'none';
+})

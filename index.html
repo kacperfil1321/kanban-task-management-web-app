@@ -7,13 +7,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="stylesheet" href="bar.css">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="css/bar.css">
+  <link rel="stylesheet" href="css/main.css">
   
   <title>Frontend Mentor | Kanban task management web app</title>
 </head>
 <body>
-  <script src="darkModePreload.js"></script>
+  <script src="js/darkModePreload.js"></script>
   <div id="topBar">
     <div id="logo">
       <img src="assets/logo-dark.svg">
@@ -83,20 +83,22 @@
     <button id="createNewBoard">Create New Board</button>
   </div>
 
-  <div id="deleteBoard">
-    <div class="title">Delete this board?</div>
-    <div class="subtitle">Are you sure you want to delete the '<span id="deleteBoardName"></span>' board? This action will remove all columns and tasks and cannot be reversed.</div>
+  <div id="deleteWindow">
+    <div class="title"></div>
+    <div class="subtitle"></div>
 
-    <button id="deleteBoardDelete">Delete</button>
-    <button id="deleteBoardCancel">Cancel</button>
+    <div class="buttons">
+      <button id="deleteWindowDelete">Delete</button>
+      <button id="deleteWindowCancel">Cancel</button>
+    </div>
   </div>
 
   <div id="blur"></div>
 
-  <script src="darkMode.js"></script>
-  <script src="drawBoard.js"></script>
-  <script src="selectBoard.js"></script>
-  <script src="createNewBoard.js"></script>
-  <script src="deleteBoard.js"></script>
+  <script src="js/darkMode.js"></script>
+  <script src="js/drawBoard.js"></script>
+  <script src="js/selectBoard.js"></script>
+  <script src="js/createNewBoard.js"></script>
+  <script src="js/deleteWindow.js"></script>
 </body>
 </html>

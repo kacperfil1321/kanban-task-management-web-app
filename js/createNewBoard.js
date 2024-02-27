@@ -7,7 +7,7 @@ document.getElementsByClassName('topSide')[0].getElementsByClassName('add')[0].a
 document.getElementById('blur').addEventListener('click', function (){
     document.getElementById('blur').style.display = 'none';
     document.getElementById('boardWindow').style.display = 'none';
-    document.getElementById('deleteBoard').style.display = 'none';
+    document.getElementById('deleteWindow').style.display = 'none';
 });
 
 var columns = document.getElementById('columns');
@@ -47,8 +47,14 @@ document.getElementById('createNewBoard').addEventListener('click', function (){
     drawBoard(numberOfBoards);
     selectBoard(numberOfBoards);
 
-    for(var i = 0; i < document.getElementById('boardWindow').getElementsByTagName('input').length; i++){
-        document.getElementById('boardWindow').getElementsByTagName('input')[i].value = '';
+    var column = document.getElementById('boardWindow').getElementsByClassName('column');
+    for(var i = 1; i < column.length; i++){
+        removeColumn(column[i].getElementsByTagName('svg')[0]);
+    }
+
+    var input = document.getElementById('boardWindow').getElementsByTagName('input');
+    for(var i = 0; i < input.length; i++){
+        input[i].value = '';
     }
 });
 

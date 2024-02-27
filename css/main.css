@@ -17,7 +17,7 @@
     transition-duration: 0.3s;
 }
 
-#boardWindow, #deleteBoard{
+#boardWindow, #deleteWindow{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -33,22 +33,14 @@
     transition-duration: 0.3s;
 }
 
-#boardWindow .title, #deleteBoard .title{
+#boardWindow .title, #deleteWindow .title{
     font-size: 23px;
     margin-bottom: 25px;
 }
 
-#deleteBoard .title{
-    color: #EA5555;
-}
-
-#boardWindow .subtitle, #deleteBoard .subtitle{
+#boardWindow .subtitle, #deleteWindow .subtitle{
     font-size: 15px;
     margin-bottom: 10px;
-}
-
-#deleteBoard .subtitle{
-    font-weight: normal;
 }
 
 #boardWindow .column{
@@ -107,4 +99,38 @@
 #boardWindow #createNewBoard{
     background-color: #635FC7;
     color: #FFF;
+}
+
+#deleteWindow .title{
+    color: #EA5555;
+}
+
+#deleteWindow .subtitle{
+    font-weight: normal;
+    color: #828FA3;
+}
+
+#deleteWindow .buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#deleteWindow button{
+    width: calc(50% - 10px);
+    padding: 15px 0;
+    font-size: 17px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#deleteWindow #deleteWindowDelete{
+    background-color: #EA5555;
+    color: #FFF;
+}
+
+#deleteWindow #deleteWindowCancel{
+    color: #635FC7;
+    background-color: var(--boardHoverBg);
 }
