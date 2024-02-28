@@ -29,32 +29,41 @@ function removeColumn(x){
 
 // Add new board
 document.getElementById('createNewBoard').addEventListener('click', function (){
-    var numberOfBoards = parseInt(localStorage.getItem('numberOfBoards')) + 1;
-    localStorage.setItem('numberOfBoards', numberOfBoards);
-    localStorage.setItem('board' + numberOfBoards, document.getElementById('boardName').value);
-
-    var boardColumn = document.getElementsByClassName('boardColumn');
-
-    for(var i = 0; i < boardColumn.length; i++){
-        localStorage.setItem('board' + numberOfBoards + 'column' + i, boardColumn[i].value);
-    }
-
-    document.getElementById('blur').style.display = 'none';
-    document.getElementById('boardWindow').style.display = 'none';
-
-    document.getElementById('numberOfBoards').innerText = numberOfBoards;
-    localStorage.setItem('activeBoard', numberOfBoards);
-    drawBoard(numberOfBoards);
-    selectBoard(numberOfBoards);
-
-    var column = document.getElementById('boardWindow').getElementsByClassName('column');
-    for(var i = 1; i < column.length; i++){
-        removeColumn(column[i].getElementsByTagName('svg')[0]);
-    }
-
     var input = document.getElementById('boardWindow').getElementsByTagName('input');
     for(var i = 0; i < input.length; i++){
-        input[i].value = '';
+        if(input[i].value.length == 0){
+           input[i].classList.add('error');
+           var error = 1; 
+        }
+    }
+
+    if(error != 1){
+        var numberOfBoards = parseInt(localStorage.getItem('numberOfBoards')) + 1;
+        localStorage.setItem('numberOfBoards', numberOfBoards);
+        localStorage.setItem('board' + numberOfBoards, document.getElementById('boardName').value);
+    
+        var boardColumn = document.getElementsByClassName('boardColumn');
+    
+        for(var i = 0; i < boardColumn.length; i++){
+            localStorage.setItem('board' + numberOfBoards + 'column' + i, boardColumn[i].value);
+        }
+    
+        document.getElementById('blur').style.display = 'none';
+        document.getElementById('boardWindow').style.display = 'none';
+    
+        document.getElementById('numberOfBoards').innerText = numberOfBoards;
+        localStorage.setItem('activeBoard', numberOfBoards);
+        drawBoard(numberOfBoards);
+        selectBoard(numberOfBoards);
+    
+        var column = document.getElementById('boardWindow').getElementsByClassName('column');
+        for(var i = 1; i < column.length; i++){
+            removeColumn(column[i].getElementsByTagName('svg')[0]);
+        }
+    
+        for(var i = 0; i < input.length; i++){
+            input[i].value = '';
+        }
     }
 });
 
