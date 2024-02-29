@@ -95,7 +95,6 @@
     justify-content: space-between;
     width: 230px;
     height: calc(100vh - 70px);
-    padding-right: 20px;
     border-right: solid var(--border) 2px;
     box-sizing: border-box;
     color: #828FA3;
@@ -105,6 +104,16 @@
 
 #sideBar svg{
     margin-right: 10px;
+}
+
+#sideBar .topSide{
+    height: calc(100% - 136px);
+}
+
+#sideBar .topSide #boards{
+    max-height: calc(100% - 91px);
+    overflow-y: auto;
+    padding-right: 20px;
 }
 
 #sideBar .topSide .board, #sideBar .topSide .title{
@@ -148,6 +157,7 @@
 
 #sideBar .topSide .add{
     color: #635FC7;
+    margin-right: 20px;
 }
 
 #sideBar .topSide .add path{
@@ -156,7 +166,7 @@
 
 #sideBar .bottomSide #modeToogle{
     background-color: var(--main);
-    margin-left: 20px;
+    margin: 20px 20px 0 20px;
     padding: 10px 0;
     display: flex;
     justify-content: center;
@@ -200,8 +210,7 @@
     padding: 15px 20px;
     font-size: 12px;
     border-radius: 0 20px 20px 0;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin: 10px 20px 20px 0;
     transition-duration: 0.25s;
 }
 
@@ -224,3 +233,16 @@
     fill: #635FC7;
     transition-duration: 0.25s;
 }
+
+*::-webkit-scrollbar {
+    width: 5px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #E4EBFA;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #635FC7;
+  }
