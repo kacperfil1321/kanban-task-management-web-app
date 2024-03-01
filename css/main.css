@@ -44,9 +44,13 @@
 }
 
 #boardWindow .column{
-    position: relative;
     width: 350px;
     margin-bottom: 10px;
+}
+
+#boardWindow .input{
+    position: relative;
+    width: 100%;
 }
 
 #boardWindow input{
@@ -74,7 +78,11 @@
 }
 
 #boardWindow #columns .column input{
-    width: calc(100% - 30px);
+    width: calc(100% - 10px);
+}
+
+#boardWindow #columns .column .errorText{
+    right: 20px;
 }
 
 #boardWindow #columns .column svg:hover > g{
@@ -153,7 +161,7 @@
     display: none;
     position: absolute;
     top: 50%;
-    right: 40px;
+    right: 10px;
     transform: translateY(-50%);
     font-size: 13px;
     font-weight: normal;
