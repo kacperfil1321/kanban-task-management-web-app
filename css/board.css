@@ -1,0 +1,63 @@
+#board{
+    float: left;
+    width: calc(100% - 230px);
+    height: calc(100vh - 70px);
+    background-color: var(--main);
+    display: flex;
+    transition-duration: 0.3s;
+}
+
+#board .column{
+    width: 300px;
+    padding: 20px 0 0 20px;
+}
+
+#board .column .title{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #828FA3;
+    margin-bottom: 20px;
+}
+
+#board .column .title::before{
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#board .column .tasks .task{
+    padding: 20px;
+    background-color: var(--barMain);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition-duration: 0.3s;
+}
+
+#board .column .tasks .task .taskTitle{
+    color: var(--titleColor);
+    margin-bottom: 10px;
+    transition-duration: 0.3s;
+}
+
+#board .column .tasks .task .counter{
+    color: #828FA3;
+    font-size: 14px;
+}
+
+#board .column:nth-child(1n) .title::before{
+    background-color: #49C4E5;
+}
+
+#board .column:nth-child(2n) .title::before{
+    background-color: #8471F2;
+}
+
+#board .column:nth-child(3n) .title::before{
+    background-color: #67E2AE;
+}

@@ -8,7 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="css/bar.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/board.css">
+  <link rel="stylesheet" href="css/window.css">
   
   <title>Frontend Mentor | Kanban task management web app</title>
 </head>
@@ -60,8 +61,32 @@
     </div>
   </div>
 
-  <div id="main">
+  <div id="board">
+    <div class="column">
+      <div class="title">Todo (4)</div>
+      <div class="tasks">
+        <div class="task">
+          <div class="taskTitle">Build UI for onboarding flow</div>
+          <div class="counter">0 of 3 subtasks</div>
+        </div>
+        <div class="task">
+          <div class="taskTitle">Build UI for onboarding flow</div>
+          <div class="counter">0 of 3 subtasks</div>
+        </div>
+      </div>
+    </div>
 
+    <div class="column">
+      <div class="title">Todo (4)</div>
+      <div class="tasks">
+        <div class="task">
+          <div class="taskTitle">Build UI for onboarding flow</div>
+          <div class="counter">0 of 3 subtasks</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column add">+New Column</div>
   </div>
 
   <div id="boardWindow">

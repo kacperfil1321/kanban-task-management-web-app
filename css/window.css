@@ -9,14 +9,6 @@
     opacity: 0.6;
 }
 
-#main{
-    float: left;
-    width: calc(100% - 230px);
-    height: calc(100vh - 70px);
-    background-color: var(--main);
-    transition-duration: 0.3s;
-}
-
 #boardWindow, #deleteWindow{
     position: absolute;
     top: 50%;
