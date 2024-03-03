@@ -1,4 +1,4 @@
-document.getElementById('toogle').addEventListener('click', change);
+document.getElementById('toggle').addEventListener('click', change);
 
 function change(){
     if(localStorage.getItem('darkMode') == 0){
@@ -13,7 +13,7 @@ function change(){
 function change2(){
     if(localStorage.getItem('darkMode') == 1){
         document.getElementById('logo').getElementsByTagName('img')[0].src = 'assets/logo-light.svg';
-        document.getElementById('toogle').getElementsByClassName('point')[0].style.left = '22px';
+        document.getElementById('toggle').getElementsByClassName('point')[0].style.left = '22px';
         document.querySelector(':root').style.setProperty('--barMain', '#2B2C37');
         document.querySelector(':root').style.setProperty('--boardHoverBg', '#FFF');
         document.querySelector(':root').style.setProperty('--border', '#3E3F4E');
@@ -22,7 +22,7 @@ function change2(){
     }
     else{
         document.getElementById('logo').getElementsByTagName('img')[0].src = 'assets/logo-dark.svg';
-        document.getElementById('toogle').getElementsByClassName('point')[0].style.left = '3px';
+        document.getElementById('toggle').getElementsByClassName('point')[0].style.left = '3px';
         document.querySelector(':root').style.setProperty('--barMain', '#FFF');
         document.querySelector(':root').style.setProperty('--boardHoverBg', '#E4EBFA');
         document.querySelector(':root').style.setProperty('--border', '#E4EBFA');
@@ -33,9 +33,9 @@ function change2(){
 
 if(localStorage.getItem('darkMode') == 1){
     document.getElementById('logo').getElementsByTagName('img')[0].src = 'assets/logo-light.svg';
-    document.getElementById('toogle').getElementsByClassName('point')[0].style.left = '22px';
+    document.getElementById('toggle').getElementsByClassName('point')[0].style.left = '22px';
 }
 else{
     document.getElementById('logo').getElementsByTagName('img')[0].src = 'assets/logo-dark.svg';
-    document.getElementById('toogle').getElementsByClassName('point')[0].style.left = '3px';
+    document.getElementById('toggle').getElementsByClassName('point')[0].style.left = '3px';
 }

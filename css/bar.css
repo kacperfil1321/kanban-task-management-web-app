@@ -102,6 +102,11 @@
     transition-duration: 0.3s;
 }
 
+.hidden{
+    width: 0 !important;
+    border: none !important;
+}
+
 #sideBar svg{
     margin-right: 10px;
 }
@@ -122,6 +127,8 @@
     padding: 15px 20px;
     font-size: 12px;
     border-radius: 0 20px 20px 0;
+    overflow: hidden;
+    white-space: nowrap;
     transition-duration: 0.25s;
 }
 
@@ -164,7 +171,7 @@
     fill: #635FC7;
 }
 
-#sideBar .bottomSide #modeToogle{
+#sideBar .bottomSide #modeToggle{
     background-color: var(--main);
     margin: 20px 20px 0 20px;
     padding: 10px 0;
@@ -174,11 +181,11 @@
     transition-duration: 0.3s;
 }
 
-#sideBar .bottomSide #modeToogle img{
+#sideBar .bottomSide #modeToggle img{
     margin: 0 15px;
 }
 
-#sideBar .bottomSide #modeToogle #toogle{
+#sideBar .bottomSide #modeToggle #toggle{
     position: relative;
     width: 40px;
     height: 20px;
@@ -187,13 +194,13 @@
     transition-duration: 0.25s;
 }
 
-#sideBar .bottomSide #modeToogle #toogle:hover{
+#sideBar .bottomSide #modeToggle #toggle:hover{
     background-color: #A8A4FF;
     cursor: pointer;
     transition-duration: 0.25s;
 }
 
-#sideBar .bottomSide #modeToogle #toogle .point{
+#sideBar .bottomSide #modeToggle #toggle .point{
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
@@ -204,7 +211,7 @@
     transition-duration: 0.3s;
 }
 
-#sideBar .bottomSide #sideBarToogle{
+#sideBar .bottomSide #sideBarToggle{
     display: flex;
     justify-content: flex-start;
     padding: 15px 20px;
@@ -214,22 +221,22 @@
     transition-duration: 0.25s;
 }
 
-#sideBar .bottomSide #sideBarToogle:hover{
+#sideBar .bottomSide #sideBarToggle:hover{
     background-color: var(--boardHoverBg);
     color: #635FC7;
     cursor: pointer;
     transition-duration: 0.25s;
 }
 
-#sideBar .bottomSide #sideBarToogle svg{
+#sideBar .bottomSide #sideBarToggle svg{
     margin-right: 10px;
 }
 
-#sideBar .bottomSide #sideBarToogle path{
+#sideBar .bottomSide #sideBarToggle path{
     transition-duration: 0.25s;
 }
 
-#sideBar .bottomSide #sideBarToogle:hover path{
+#sideBar .bottomSide #sideBarToggle:hover path{
     fill: #635FC7;
     transition-duration: 0.25s;
 }
