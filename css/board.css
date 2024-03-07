@@ -1,10 +1,15 @@
 #board{
-    float: left;
+    position: absolute;
+    right: 0;
     width: calc(100% - 230px);
     height: calc(100vh - 70px);
     background-color: var(--main);
     display: flex;
     transition-duration: 0.3s;
+}
+
+.hidden{
+    width: 100% !important;
 }
 
 #board .column{

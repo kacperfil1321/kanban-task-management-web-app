@@ -102,11 +102,6 @@
     transition-duration: 0.3s;
 }
 
-.hidden{
-    width: 0 !important;
-    border: none !important;
-}
-
 #sideBar svg{
     margin-right: 10px;
 }
@@ -127,8 +122,6 @@
     padding: 15px 20px;
     font-size: 12px;
     border-radius: 0 20px 20px 0;
-    overflow: hidden;
-    white-space: nowrap;
     transition-duration: 0.25s;
 }
 
@@ -228,8 +221,14 @@
     transition-duration: 0.25s;
 }
 
-#sideBar .bottomSide #sideBarToggle svg{
-    margin-right: 10px;
+#sideBar .bottomSide #sideBarToggle #eyeIcon{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    padding: 15px 20px;
+    border-radius: 0 20px 20px 0;
+    z-index: 1;
+    transition-duration: 0.3s;
 }
 
 #sideBar .bottomSide #sideBarToggle path{
@@ -239,6 +238,10 @@
 #sideBar .bottomSide #sideBarToggle:hover path{
     fill: #635FC7;
     transition-duration: 0.25s;
+}
+
+#sideBar .bottomSide #sideBarToggle .title{
+    margin-left: 40px;
 }
 
 *::-webkit-scrollbar {
