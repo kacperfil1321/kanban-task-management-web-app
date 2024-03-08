@@ -231,6 +231,14 @@
     transition-duration: 0.3s;
 }
 
+.eyeHidden{
+    background-color: #635FC7;
+}
+
+.eyeHidden:hover path{
+    fill: #FFF !important;
+}
+
 #sideBar .bottomSide #sideBarToggle path{
     transition-duration: 0.25s;
 }
