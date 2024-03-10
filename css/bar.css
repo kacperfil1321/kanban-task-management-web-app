@@ -43,6 +43,7 @@
 #topBar #options{
     display: flex;
     align-items: center;
+    z-index: 1;
 }
 
 #topBar #options #addNewTask{
