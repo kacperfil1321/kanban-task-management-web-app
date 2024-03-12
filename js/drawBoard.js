@@ -25,7 +25,7 @@ function drawBoard(){
             '<div class="column">' +
             '    <div class="title">Todo (' + task + ')</div>' +
             '    <div class="tasks">' +
-            tasks +
+                    tasks +
             '    </div>' +
             '</div>';
             column++;

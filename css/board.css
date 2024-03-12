@@ -66,3 +66,14 @@
 #board .column:nth-child(3n) .title::before{
     background-color: #67E2AE;
 }
+
+#board .add{
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--boardAddColumn);
+    color: #828FA3;
+    font-size: 22px;
+}
