@@ -9,6 +9,7 @@ function selectBoard(x){
             document.getElementsByClassName('active')[0].classList.remove('active');
         }
         document.getElementsByClassName('board')[x - 1].classList.add('active');
+        drawBoard();
     }
 }
 

@@ -69,11 +69,45 @@
 
 #board .add{
     width: 300px;
-    height: 100%;
+    height: calc(100% - 78px);
+    margin: 58px 0 20px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--boardAddColumn);
     color: #828FA3;
     font-size: 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+#board .add:hover{
+    color: #635FC7;
+}
+
+#board .deafult{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#board .deafult .title{
+    color: #828FA3;
+    margin-bottom: 20px;
+}
+
+#board .deafult #addNewColumn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #635FC7;
+    color: #FFF;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
 }

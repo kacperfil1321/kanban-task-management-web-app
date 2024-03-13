@@ -23,15 +23,20 @@ function drawBoard(){
             }
             board.innerHTML += '' +
             '<div class="column">' +
-            '    <div class="title">Todo (' + task + ')</div>' +
+            '    <div class="title">' + localStorage.getItem('board' + localStorage.getItem('activeBoard') + 'column' + column) + ' (' + task + ')</div>' +
             '    <div class="tasks">' +
                     tasks +
             '    </div>' +
             '</div>';
             column++;
         }
+        board.innerHTML += '<div class="add">+ New Column</div>';
     }
     else{
-        //deafult
+        board.innerHTML = '' +
+        '<div class="deafult">' +
+        '   <div class="title">This board is empty. Create a new column to get started.</div>' +
+        '   <button id="addNewColumn">+Add New Column</button>' +
+        '</div>';
     }
 }
