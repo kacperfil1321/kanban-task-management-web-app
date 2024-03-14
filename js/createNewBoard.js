@@ -7,6 +7,7 @@ document.getElementsByClassName('topSide')[0].getElementsByClassName('add')[0].a
 document.getElementById('blur').addEventListener('click', function (){
     document.getElementById('blur').style.display = 'none';
     document.getElementById('boardWindow').style.display = 'none';
+    document.getElementById('taskWindow').style.display = 'none';
     document.getElementById('deleteWindow').style.display = 'none';
 });
 
@@ -70,7 +71,7 @@ document.getElementById('createNewBoard').addEventListener('click', function (){
     
         document.getElementById('numberOfBoards').innerText = numberOfBoards;
         localStorage.setItem('activeBoard', numberOfBoards);
-        drawBoard(numberOfBoards);
+        drawBoardList(numberOfBoards);
         selectBoard(numberOfBoards);
     
         document.getElementById('boardName').value = '';

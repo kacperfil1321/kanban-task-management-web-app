@@ -9,7 +9,7 @@
     opacity: 0.6;
 }
 
-#boardWindow, #deleteWindow{
+#boardWindow, #taskWindow, #deleteWindow{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -25,27 +25,27 @@
     transition-duration: 0.3s;
 }
 
-#boardWindow .title, #deleteWindow .title{
+#boardWindow .title, #taskWindow .title, #deleteWindow .title{
     font-size: 23px;
     margin-bottom: 25px;
 }
 
-#boardWindow .subtitle, #deleteWindow .subtitle{
+#boardWindow .subtitle, #taskWindow .subtitle, #deleteWindow .subtitle{
     font-size: 15px;
     margin-bottom: 10px;
 }
 
-#boardWindow .column{
+#boardWindow .column, #taskWindow .column{
     width: 350px;
     margin-bottom: 10px;
 }
 
-#boardWindow .input{
+#boardWindow .input, #taskWindow .input{
     position: relative;
     width: 100%;
 }
 
-#boardWindow input{
+#boardWindow input, #taskWindow input{
     width: 100%;
     padding: 9px 10px;
     font-size: 15px;
@@ -59,33 +59,33 @@
     transition-duration: 0.3s;
 }
 
-#boardWindow input:focus{
+#boardWindow input:focus, #taskWindow input:focus{
     border-color: #635FC7;
 }
 
-#boardWindow #columns .column{
+#boardWindow #columns .column, #taskWindow #subtasks .column{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#boardWindow #columns .column input{
+#boardWindow #columns .column input, #taskWindow #subtasks .column input{
     width: calc(100% - 10px);
 }
 
-#boardWindow #columns .column .errorText{
+#boardWindow #columns .column .errorText, #taskWindow #subtasks .column .errorText{
     right: 20px;
 }
 
-#boardWindow #columns .column svg:hover > g{
+#boardWindow #columns .column svg:hover > g, #taskWindow #subtasks .column svg:hover > g{
     fill: #EA5555;
 }
 
-#boardWindow #columns .column svg{
+#boardWindow #columns .column svg, #taskWindow #subtasks .column svg{
     cursor: pointer;
 }
 
-#boardWindow #addNewColumn, #boardWindow #createNewBoard{
+#boardWindow button, #taskWindow button{
     width: 350px;
     padding: 10px 0;
     border-radius: 20px;
@@ -94,16 +94,41 @@
     cursor: pointer;
 }
 
-#boardWindow #addNewColumn{
+#boardWindow #addNewColumn, #taskWindow #addNewSubtask{
     background-color: var(--boardHoverBg);
     color: #635FC7;
     margin-bottom: 10px;
     transition-duration: 0.3s;
 }
 
-#boardWindow #createNewBoard{
+#boardWindow #createNewBoard, #taskWindow #createTask{
     background-color: #635FC7;
     color: #FFF;
+}
+
+#taskWindow #status{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: solid var(--border) 1px;
+    border-radius: 5px;
+    padding: 9px 10px;
+    box-sizing: border-box;
+}
+
+#taskWindow #status .input{
+    font-size: 15px;
+    font-weight: normal;
+}
+
+#taskWindow #statusList{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: red;
 }
 
 #deleteWindow .title{

@@ -66,8 +66,8 @@
   <div id="boardWindow">
     <div class="title">Add New Board</div>
 
+    <div class="subtitle">Board Name</div>
     <div class="column">
-      <div class="subtitle">Board Name</div>
       <div class="input">
         <input id="boardName" placeholder="Web Design" oninput="checkInput(this)">
         <span class="errorText">Can't be empty</span>
@@ -88,6 +88,52 @@
     <button id="createNewBoard">Create New Board</button>
   </div>
 
+  <div id="taskWindow">
+    <div class="title">Add New Task</div>
+
+    <div class="column">
+      <div class="subtitle">Title</div>
+      <div class="input">
+        <input placeholder="e.g. Take coffee break">
+        <span class="errorText">Can't be empty</span>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="subtitle">Description</div>
+      <div class="input">
+        <input placeholder="e.g. It's always good to take a break. This 15 minute break will recharge the batteries a little.">
+      </div>
+    </div>
+
+    <div id="subtasks">
+      <div class="subtitle">Subtasks</div>
+      <div class="column">
+        <div class="input">
+          <input placeholder="e.g. Make coffee">
+          <span class="errorText">Can't be empty</span>
+        </div>
+        <svg onclick="removeColumn(this)" width="15" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="#828FA3" fill-rule="evenodd"><path d="m12.728 0 2.122 2.122L2.122 14.85 0 12.728z"/><path d="M0 2.122 2.122 0 14.85 12.728l-2.122 2.122z"/></g></svg>
+      </div>
+    </div>
+
+    <button id="addNewSubtask">+ Add New Subtask</button>
+
+    <div class="column">
+      <div class="subtitle">Status</div>
+      <div id="status">
+        <div class="input">Doing</div>
+        <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path stroke="#635FC7" stroke-width="2" fill="none" d="m1 1 4 4 4-4"/></svg>
+        <div id="statusList">
+          <div>cos</div>
+          <div>tam</div>
+        </div>
+      </div>
+    </div>
+
+    <button id="createTask">Create Task</button>
+  </div>
+
   <div id="deleteWindow">
     <div class="title"></div>
     <div class="subtitle"></div>
@@ -106,6 +152,7 @@
   <script src="js/sidebar.js"></script>
   <script src="js/selectBoard.js"></script>
   <script src="js/createNewBoard.js"></script>
+  <script src="js/addNewTask.js"></script>
   <script src="js/deleteWindow.js"></script>
 </body>
 </html>
