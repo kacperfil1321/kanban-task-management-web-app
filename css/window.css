@@ -45,7 +45,7 @@
     width: 100%;
 }
 
-#boardWindow input, #taskWindow input{
+#boardWindow input, #taskWindow input, #taskWindow textarea{
     width: 100%;
     padding: 9px 10px;
     font-size: 15px;
@@ -116,6 +116,7 @@
     border-radius: 5px;
     padding: 9px 10px;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 #taskWindow #status .input{
@@ -124,7 +125,6 @@
 }
 
 #taskWindow #statusList{
-    display: none;
     position: absolute;
     top: 40px;
     left: 0;

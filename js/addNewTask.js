@@ -13,3 +13,10 @@ document.getElementById('status').addEventListener('click', function(){
         document.getElementById('statusList').style.display = 'none';
     }
 });
+
+var selectedStatus = 0;
+
+function statusSelectColumn(x){
+    selectedStatus = x;
+    document.getElementById('status').getElementsByClassName('input')[0].innerText = localStorage.getItem('board' + localStorage.getItem('activeBoard') + 'column' + x);
+}

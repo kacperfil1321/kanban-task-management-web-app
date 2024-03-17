@@ -2,6 +2,8 @@ var board = document.getElementById('board');
 
 function drawBoard(){
     board.innerHTML = '';
+    document.getElementById('statusList').innerHTML = '';
+
     if(localStorage.getItem('board' + localStorage.getItem('activeBoard') + 'column0')){
         var column = 0;
         while(localStorage.getItem('board' + localStorage.getItem('activeBoard') + 'column' + column)){
@@ -28,6 +30,10 @@ function drawBoard(){
                     tasks +
             '    </div>' +
             '</div>';
+            if(document.getElementById('status').getElementsByClassName('input')[0].innerText == ''){
+                document.getElementById('status').getElementsByClassName('input')[0].innerText = localStorage.getItem('board' + localStorage.getItem('activeBoard') + 'column' + column);
+            }
+            document.getElementById('statusList').innerHTML += '<div class="listColumn" onclick="statusSelectColumn(' + column + ')">' + localStorage.getItem('board' + localStorage.getItem('activeBoard') + 'column' + column) + '</div>';
             column++;
         }
         board.innerHTML += '<div class="add">+ New Column</div>';
