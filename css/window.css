@@ -35,7 +35,8 @@
     margin-bottom: 10px;
 }
 
-#boardWindow .column, #taskWindow .column{
+/* Występuje niespójność klas - do rozwiązania */
+#boardWindow .column, #taskWindow .column, #taskWindow .subtask{
     width: 350px;
     margin-bottom: 10px;
 }
@@ -59,29 +60,29 @@
     transition-duration: 0.3s;
 }
 
-#boardWindow input:focus, #taskWindow input:focus{
+#boardWindow input:focus, #taskWindow input:focus, #taskWindow textarea:focus{
     border-color: #635FC7;
 }
 
-#boardWindow #columns .column, #taskWindow #subtasks .column{
+#boardWindow #columns .column, #taskWindow #subtasks .subtask{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#boardWindow #columns .column input, #taskWindow #subtasks .column input{
+#boardWindow #columns .column input, #taskWindow #subtasks .subtask input{
     width: calc(100% - 10px);
 }
 
-#boardWindow #columns .column .errorText, #taskWindow #subtasks .column .errorText{
+#boardWindow #columns .column .errorText, #taskWindow #subtasks .subtask .errorText{
     right: 20px;
 }
 
-#boardWindow #columns .column svg:hover > g, #taskWindow #subtasks .column svg:hover > g{
+#boardWindow #columns .column svg:hover > g, #taskWindow #subtasks .subtask svg:hover > g{
     fill: #EA5555;
 }
 
-#boardWindow #columns .column svg, #taskWindow #subtasks .column svg{
+#boardWindow #columns .column svg, #taskWindow #subtasks .subtask svg{
     cursor: pointer;
 }
 
@@ -117,11 +118,16 @@
     padding: 9px 10px;
     box-sizing: border-box;
     cursor: pointer;
+    transition-duration: 0.3s;
 }
 
 #taskWindow #status .input{
     font-size: 15px;
     font-weight: normal;
+}
+
+#taskWindow .input textarea{
+    resize: none;
 }
 
 #taskWindow #statusList{
