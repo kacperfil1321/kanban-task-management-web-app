@@ -25,7 +25,7 @@ function drawBoard(){
             }
             board.innerHTML += '' +
             '<div class="column">' +
-            '    <div class="title">' + localStorage.getItem('board' + localStorage.getItem('activeBoard') + 'column' + column) + ' (' + task + ')</div>' +
+            '    <div class="title" data-value="' + task + '">' + localStorage.getItem('board' + localStorage.getItem('activeBoard') + 'column' + column) + ' (' + task + ')</div>' +
             '    <div class="tasks">' +
                     tasks +
             '    </div>' +

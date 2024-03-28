@@ -94,7 +94,7 @@
     <div class="column">
       <div class="subtitle">Title</div>
       <div class="input">
-        <input placeholder="e.g. Take coffee break">
+        <input id="taskName" placeholder="e.g. Take coffee break">
         <span class="errorText">Can't be empty</span>
       </div>
     </div>
@@ -102,7 +102,7 @@
     <div class="column">
       <div class="subtitle">Description</div>
       <div class="input">
-        <textarea rows="4" placeholder="e.g. It's always good to take a break. This 15 minute break will recharge the batteries a little."></textarea>
+        <textarea id="taskDescription" rows="4" placeholder="e.g. It's always good to take a break. This 15 minute break will recharge the batteries a little."></textarea>
       </div>
     </div>
 
@@ -110,7 +110,7 @@
       <div class="subtitle">Subtasks</div>
       <div class="subtask">
         <div class="input">
-          <input placeholder="e.g. Make coffee">
+          <input class="subtaskInput" placeholder="e.g. Make coffee">
           <span class="errorText">Can't be empty</span>
         </div>
         <svg onclick="removeColumn(1, this)" width="15" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="#828FA3" fill-rule="evenodd"><path d="m12.728 0 2.122 2.122L2.122 14.85 0 12.728z"/><path d="M0 2.122 2.122 0 14.85 12.728l-2.122 2.122z"/></g></svg>
@@ -148,9 +148,7 @@
   <script src="js/drawBoard.js"></script>
   <script src="js/sidebar.js"></script>
   <script src="js/selectBoard.js"></script>
-  <script src="js/createNewBoard.js"></script>
-  <script src="js/createNewTask.js"></script>
-  <script src="js/addNewTask.js"></script>
+  <script src="js/window.js"></script>
   <script src="js/deleteWindow.js"></script>
 </body>
 </html>
