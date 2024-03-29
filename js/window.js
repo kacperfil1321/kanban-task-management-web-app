@@ -17,13 +17,13 @@ document.getElementsByClassName('topSide')[0].getElementsByClassName('add')[0].a
 // task
 document.getElementById('addNewTask').addEventListener('click', function (){
     document.getElementById('blur').style.display = 'block';
-    document.getElementById('taskWindow').style.display = 'flex';
+    document.getElementById('addNewTaskWindow').style.display = 'flex';
 });
 
 document.getElementById('blur').addEventListener('click', function (){
     document.getElementById('blur').style.display = 'none';
     document.getElementById('boardWindow').style.display = 'none';
-    document.getElementById('taskWindow').style.display = 'none';
+    document.getElementById('addNewTaskWindow').style.display = 'none';
     document.getElementById('deleteWindow').style.display = 'none';
 });
 
@@ -111,13 +111,13 @@ document.getElementById('createNewBoard').addEventListener('click', function (){
     }
 });
 
-// TASK
+// ADD NEW TASK
 var subtasks = document.getElementById('subtasks');
 var subtask = document.createElement('div')
 subtask.classList.add('subtask');
 subtask.innerHTML = '' +
 '<div class="input">' +
-'   <input placeholder="e.g. Make coffee" oninput="checkInput(this)">' +
+'   <input class="subtaskInput" placeholder="e.g. Make coffee" oninput="checkInput(this)">' +
 '   <span class="errorText">Can\'t be empty</span>' +
 '</div>' +
 '<svg onclick="removeColumn(1, this)" width="15" height="15" xmlns="http://www.w3.org/2000/svg"><g fill="#828FA3" fill-rule="evenodd"><path d="m12.728 0 2.122 2.122L2.122 14.85 0 12.728z"/><path d="M0 2.122 2.122 0 14.85 12.728l-2.122 2.122z"/></g></svg>';
@@ -152,7 +152,7 @@ document.getElementById('addNewSubtask').addEventListener('click', function (){
 
 // Add new task
 document.getElementById('createTask').addEventListener('click', function (){
-    var input = document.getElementById('taskWindow').getElementsByTagName('input');
+    var input = document.getElementById('addNewTaskWindow').getElementsByTagName('input');
     for(var i = 0; i < input.length; i++){
         if(input[i].value.length == 0){
            input[i].classList.add('error');
@@ -171,10 +171,11 @@ document.getElementById('createTask').addEventListener('click', function (){
     
         for(var i = 0; i < subtaskInput.length; i++){
             localStorage.setItem('board' + activeBoard + 'column' + selectedStatus + 'task' + taskNumber + 'subtask' + i, subtaskInput[i].value);
+            localStorage.setItem('board' + activeBoard + 'column' + selectedStatus + 'task' + taskNumber + 'subtask' + i + 'status', 0);
         }
     
         document.getElementById('blur').style.display = 'none';
-        document.getElementById('taskWindow').style.display = 'none';
+        document.getElementById('addNewTaskWindow').style.display = 'none';
     
         selectBoard(activeBoard);
     

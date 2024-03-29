@@ -9,7 +9,7 @@
     opacity: 0.6;
 }
 
-#boardWindow, #taskWindow, #deleteWindow{
+#boardWindow, #addNewTaskWindow, #deleteWindow{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -25,28 +25,28 @@
     transition-duration: 0.3s;
 }
 
-#boardWindow .title, #taskWindow .title, #deleteWindow .title{
+#boardWindow .title, #addNewTaskWindow .title, #deleteWindow .title{
     font-size: 23px;
     margin-bottom: 25px;
 }
 
-#boardWindow .subtitle, #taskWindow .subtitle, #deleteWindow .subtitle{
+#boardWindow .subtitle, #addNewTaskWindow .subtitle, #deleteWindow .subtitle{
     font-size: 15px;
     margin-bottom: 10px;
 }
 
 /* Występuje niespójność klas - do rozwiązania */
-#boardWindow .column, #taskWindow .column, #taskWindow .subtask{
+#boardWindow .column, #addNewTaskWindow .column, #addNewTaskWindow .subtask{
     width: 350px;
     margin-bottom: 10px;
 }
 
-#boardWindow .input, #taskWindow .input{
+#boardWindow .input, #addNewTaskWindow .input{
     position: relative;
     width: 100%;
 }
 
-#boardWindow input, #taskWindow input, #taskWindow textarea{
+#boardWindow input, #addNewTaskWindow input, #addNewTaskWindow textarea{
     width: 100%;
     padding: 9px 10px;
     font-size: 15px;
@@ -60,33 +60,33 @@
     transition-duration: 0.3s;
 }
 
-#boardWindow input:focus, #taskWindow input:focus, #taskWindow textarea:focus{
+#boardWindow input:focus, #addNewTaskWindow input:focus, #addNewTaskWindow textarea:focus{
     border-color: #635FC7;
 }
 
-#boardWindow #columns .column, #taskWindow #subtasks .subtask{
+#boardWindow #columns .column, #addNewTaskWindow #subtasks .subtask{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#boardWindow #columns .column input, #taskWindow #subtasks .subtask input{
+#boardWindow #columns .column input, #addNewTaskWindow #subtasks .subtask input{
     width: calc(100% - 10px);
 }
 
-#boardWindow #columns .column .errorText, #taskWindow #subtasks .subtask .errorText{
+#boardWindow #columns .column .errorText, #addNewTaskWindow #subtasks .subtask .errorText{
     right: 20px;
 }
 
-#boardWindow #columns .column svg:hover > g, #taskWindow #subtasks .subtask svg:hover > g{
+#boardWindow #columns .column svg:hover > g, #addNewTaskWindow #subtasks .subtask svg:hover > g{
     fill: #EA5555;
 }
 
-#boardWindow #columns .column svg, #taskWindow #subtasks .subtask svg{
+#boardWindow #columns .column svg, #addNewTaskWindow #subtasks .subtask svg{
     cursor: pointer;
 }
 
-#boardWindow button, #taskWindow button{
+#boardWindow button, #addNewTaskWindow button{
     width: 350px;
     padding: 10px 0;
     border-radius: 20px;
@@ -95,19 +95,19 @@
     cursor: pointer;
 }
 
-#boardWindow #addNewColumn, #taskWindow #addNewSubtask{
+#boardWindow #addNewColumn, #addNewTaskWindow #addNewSubtask{
     background-color: var(--boardHoverBg);
     color: #635FC7;
     margin-bottom: 10px;
     transition-duration: 0.3s;
 }
 
-#boardWindow #createNewBoard, #taskWindow #createTask{
+#boardWindow #createNewBoard, #addNewTaskWindow #createTask{
     background-color: #635FC7;
     color: #FFF;
 }
 
-#taskWindow #status{
+#addNewTaskWindow #status{
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -121,16 +121,16 @@
     transition-duration: 0.3s;
 }
 
-#taskWindow #status .input{
+#addNewTaskWindow #status .input{
     font-size: 15px;
     font-weight: normal;
 }
 
-#taskWindow .input textarea{
+#addNewTaskWindow .input textarea{
     resize: none;
 }
 
-#taskWindow #statusList{
+#addNewTaskWindow #statusList{
     position: absolute;
     top: 40px;
     left: 0;
@@ -139,7 +139,7 @@
     border-radius: 8px;
 }
 
-#taskWindow #statusList .listColumn{
+#addNewTaskWindow #statusList .listColumn{
     padding: 10px;
     font-weight: normal;
     color: #828FA3;
@@ -147,7 +147,7 @@
     transition-duration: 0.3s;
 }
 
-#taskWindow #statusList .listColumn:hover{
+#addNewTaskWindow #statusList .listColumn:hover{
     color: #635FC7;
 }
 
